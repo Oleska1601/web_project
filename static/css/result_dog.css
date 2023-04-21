@@ -1,0 +1,29 @@
+  .card {
+    align: center;
+    height: 1000px;
+    width: 1200px;
+  }
+  .img {
+    object-fit: cover;
+    width: 600px;
+    height: 400px;
+    display: block;
+    text-align: center;
+    position: relative;
+    top: -430px;
+  }
+  .progress {
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: cover;
+    width: 800px;
+    height: 10px;
+  }
+  .title {
+    text-align: center;
+  }
+  .title-1 {
+    text-align: center;
+    position: relative;
+    top: -420px;
+  }

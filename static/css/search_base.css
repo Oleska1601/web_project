@@ -1,0 +1,45 @@
+    .site-header {
+        justify-content: space-between;
+        align-items: center;
+     }
+    .header_site {
+        text-align: center;
+    }
+    .card-img-top1 {
+        height: 190px;
+        object-fit: cover;
+    }
+    .card-img-top2 {
+        height: 215px;
+        object-fit: cover;
+    }
+    .card-img-top3 {
+        height: 215px;
+        object-fit: cover;
+    }
+    .container text-center {
+        grid-gap: 10px;
+    }
+    .card {
+        margin-bottom: 30px;
+    }
+    .auto {
+        margin-right: 20px;
+        object-fit: cover;
+        width: 30px;
+    }
+    .navbar-text {
+        right: 30px;
+    }
+    .navbar-text1 {
+        right: 30px;
+        margin-right: 20px;
+        object-fit: cover;
+        font-size: 12pt;
+        color: white;
+    }
+    .logg {
+        margin-right: 20px;
+        object-fit: cover;
+        width: 30px;
+    }

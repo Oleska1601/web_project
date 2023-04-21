@@ -1,0 +1,8 @@
+    .text {
+    object-fit: cover;
+    text-align: center;
+    position: relative;
+  }
+    body {
+    text-align: center;
+  }

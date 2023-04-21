@@ -1,0 +1,32 @@
+{% extends "log_base.html" %}
+
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="\static\css\diagram.css" />
+<center>
+    <body>
+    <h1 class="text">Тест: Какая ты собака?</h1>
+    <img src="{{url_for('static', filename='/img/main_dog_diagram.png')}}" class="text"/>
+    <div style="text-align: center;">
+        <a href="/dog_more_info" class="btn btn-primary btn-lg" role="button">Подробнее</a>
+    </div>
+    <h1 class="text">Тест: Какой ты напиток?</h1>
+    <img src="{{url_for('static', filename='/img/main_drink_diagram.png')}}" class="text"/>
+    <div style="text-align: center;">
+        <a href="/drink_more_info" class="btn btn-primary btn-lg" role="button">Подробнее</a>
+    </div>
+    <h1 class="text">Тест: Какая/ой ты кошка/кот?</h1>
+    <img src="{{url_for('static', filename='/img/main_cat_diagram.png')}}" class="text"/>
+    <div style="text-align: center;">
+        <a href="/cat_more_info" class="btn btn-primary btn-lg" role="button">Подробнее</a>
+    </div>
+    <h1 class="text">Тест: Какая ты шиншилла?</h1>
+    <img src="{{url_for('static', filename='/img/main_chin_diagram.png')}}" class="text"/>
+    <div style="text-align: center;">
+        <a href="/chin_more_info" class="btn btn-primary btn-lg" role="button">Подробнее</a>
+    </div>
+    </body>
+</center>
+
+
+{% endblock %}

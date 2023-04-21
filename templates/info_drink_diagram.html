@@ -1,0 +1,30 @@
+{% extends "log_base.html" %}
+
+{% block content %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+          crossorigin="anonymous">
+</head>
+<body>
+<br>
+<div style="text-align: center;">
+    <h1>Как бы вы охарактеризовали себя?</h1>
+
+    <img src="{{url_for('static', filename='/img/info_drink_diagram1.png')}}"/>
+    <h1>Ваша любимая погода?</h1>
+    <img src="{{url_for('static', filename='/img/info_drink_diagram2.png')}}"/>
+    <h1>Ваше любимое время года?</h1>
+    <img src="{{url_for('static', filename='/img/info_drink_diagram3.png')}}"/>
+    <h1>Какой жанр книг вы бы предпочли?</h1>
+    <img src="{{url_for('static', filename='/img/info_drink_diagram4.png')}}"/>
+    <h1>Насколько вы организованы?</h1>
+    <img src="{{url_for('static', filename='/img/info_drink_diagram5.png')}}"/>
+</div>
+</body>
+
+
+{% endblock %}

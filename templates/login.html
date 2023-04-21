@@ -1,0 +1,40 @@
+{% extends "log_base.html" %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="\static\css\login.css" />
+<!--<style>-->
+
+<!--    .formm {-->
+<!--        width: 600px;-->
+<!--        margin-left: auto;-->
+<!--        margin-right: auto;-->
+<!--    }-->
+
+
+<!--</style>-->
+<br>
+<h1 class="header_site">Авторизация</h1>
+<form action="" method="post" class="formm">
+    {{ form.hidden_tag() }}
+    <p>
+        {{ form.email.label }}<br>
+        {{ form.email(class="form-control", type="email") }}<br>
+        {% for error in form.email.errors %}
+    <div class="alert alert-danger" role="alert">
+        {{ error }}
+    </div>
+    {% endfor %}
+    </p>
+    <p>
+        {{ form.password.label }}<br>
+        {{ form.password(class="form-control", type="password") }}<br>
+        {% for error in form.password.errors %}
+    <div class="alert alert-danger" role="alert">
+        {{ error }}
+    </div>
+    {% endfor %}
+    </p>
+    <div style="text-align: center;">{{ form.submit(type="submit", class="btn btn-primary") }}</div>
+    <div>{{ message }}</div>
+</form>
+{% endblock %}

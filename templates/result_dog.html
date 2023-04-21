@@ -1,0 +1,123 @@
+{% extends "log_base.html" %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="\static\css\result_dog.css" />
+<!--<style>-->
+
+<!--  .card {-->
+<!--    align: center;-->
+<!--    height: 1000px;-->
+<!--    width: 1200px;-->
+<!--  }-->
+<!--  .img {-->
+<!--    object-fit: cover;-->
+<!--    width: 600px;-->
+<!--    height: 400px;-->
+<!--    display: block;-->
+<!--    text-align: center;-->
+<!--    position: relative;-->
+<!--    top: -430px;-->
+<!--  }-->
+<!--  .progress {-->
+<!--    margin-left: auto;-->
+<!--    margin-right: auto;-->
+<!--    object-fit: cover;-->
+<!--    width: 800px;-->
+<!--    height: 10px;-->
+<!--  }-->
+<!--  .title {-->
+<!--    text-align: center;-->
+<!--  }-->
+<!--  .title-1 {-->
+<!--    text-align: center;-->
+<!--    position: relative;-->
+<!--    top: -420px;-->
+<!--  }-->
+
+
+<!--</style>-->
+
+<br><h1 class="header_site">{{head}}</h1><br>
+<br>
+
+<div class="card mx-auto p-2">
+    <div class="card-body">
+        <h2 class="title">Результаты</h2>
+    </div>
+    {% if title == 'бульдог' %}
+    <center>
+        <img src="static/img/buldog.jpg" class="img" alt="...">
+    </center>
+    {% elif title == 'пудель' %}
+    <center>
+        <img src="static/img/pudel.jpg" class="img" alt="...">
+    </center>
+    {% elif title == 'бобтейл' %}
+    <center>
+        <img src="static/img/bobtale.jpg" class="img" alt="...">
+    </center>
+    {% elif title == 'гончая' %}
+    <center>
+        <img src="static/img/runner.jpg" class="img" alt="...">
+    </center>
+
+    {% elif title == 'молочный коктейль' %}
+    <center>
+        <img src="static/img/milkshake.jpg" class="img" alt="...">
+    </center>
+    {% elif title == 'чай' %}
+    <center>
+        <img src="static/img/tea.jpg" class="img" alt="...">
+    </center>
+    {% elif title == 'сок' %}
+    <center>
+        <img src="static/img/juice.jpg" class="img" alt="...">
+    </center>
+    {% elif title == 'кофе' %}
+    <center>
+        <img src="static/img/coffee.jpg" class="img" alt="...">
+    </center>
+
+    {% elif title == 'мейн-кун' %}
+    <center>
+        <img src="static/img/manekun.jpg" class="img" alt="...">
+    </center>
+    {% elif title == 'сиамская' %}
+    <center>
+        <img src="static/img/siam.jpg" class="img" alt="...">
+    </center>
+    {% elif title == 'русская голубая' %}
+    <center>
+        <img src="static/img/rusblue.jpg" class="img" alt="...">
+    </center>
+    {% elif title == 'сфинкс' %}
+    <center>
+        <img src="static/img/sphinks.jpg" class="img" alt="...">
+    </center>
+
+    {% elif title == 'малая длиннохвостая шиншилла' %}
+    <center>
+        <img src="static/img/tale_chin.png" class="img" alt="...">
+    </center>
+    {% elif title == 'береговая шиншилла' %}
+    <center>
+        <img src="static/img/bay_chin.jpg" class="img" alt="...">
+    </center>
+    {% elif title == 'короткохвостая шиншилла' %}
+    <center>
+        <img src="static/img/small_chin.jfif" class="img" alt="...">
+    </center>
+    {% elif title == 'большая шиншилла' %}
+    <center>
+        <img src="static/img/big_chin.jpg" class="img" alt="...">
+    </center>
+
+
+    {% endif %}
+    <h4 class="title-1">Вы {{title}}!</h4>
+    <h4 class="title-1">{{spis}}</h4>
+</div>
+</div>
+
+
+{% endblock %}

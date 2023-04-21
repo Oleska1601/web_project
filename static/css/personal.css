@@ -1,0 +1,27 @@
+  .card {
+    align: center;
+    height: 700px;
+    width: 1200px;
+  }
+  .img {
+    object-fit: cover;
+    width: 300px;
+    height: 300px;
+    float: left;
+  }
+  .progress {
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: cover;
+    width: 800px;
+    height: 10px;
+  }
+  .namee {
+    position: relative;
+    left: 35px;
+  }
+  .emaill {
+    position: relative;
+    left: 37px;
+    top: -30px;
+  }

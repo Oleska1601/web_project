@@ -1,0 +1,30 @@
+{% extends "log_base.html" %}
+
+{% block content %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+          crossorigin="anonymous">
+</head>
+<body>
+<br>
+<div style="text-align: center;">
+    <h1>В какой области вы чувствуете себя более уверенно?</h1>
+
+    <img src="{{url_for('static', filename='/img/info_cat_diagram1.png')}}"/>
+    <h1>Кем вы себя считаете?</h1>
+    <img src="{{url_for('static', filename='/img/info_cat_diagram2.png')}}"/>
+    <h1>Какую музыку предпочитаете?</h1>
+    <img src="{{url_for('static', filename='/img/info_cat_diagram3.png')}}"/>
+    <h1>Какая соцсеть удобнее для вас?</h1>
+    <img src="{{url_for('static', filename='/img/info_cat_diagram4.png')}}"/>
+    <h1>Сложно ли вам было бы без друзей?</h1>
+    <img src="{{url_for('static', filename='/img/info_cat_diagram5.png')}}"/>
+</div>
+</body>
+
+
+{% endblock %}
