@@ -37,7 +37,8 @@ def info_drink_diagram1():
                      'Задумчивый': 0}
     result_drink1 = cur.execute("""SELECT drink_1 FROM Results_drink""").fetchall()
     for el in result_drink1:
-        values_drink1[el[0]] += 1
+        if el[0] in values_drink1.keys():
+            values_drink1[el[0]] += 1
     vals1 = [values_drink1['Волнение'], values_drink1['Жизнерадостный'], values_drink1['Мечтательный'],
              values_drink1['Задумчивый']]
     idx_remove1 = []
@@ -62,7 +63,8 @@ def info_drink_diagram2():
                      'Облачно': 0}
     result_drink2 = cur.execute("""SELECT drink_2 FROM Results_drink""").fetchall()
     for el in result_drink2:
-        values_drink2[el[0]] += 1
+        if el[0] in values_drink2.keys():
+            values_drink2[el[0]] += 1
     vals2 = [values_drink2['Дождь'], values_drink2['Солнце'], values_drink2['Снег'], values_drink2['Облачно']]
     idx_remove2 = []
     for el in vals2:
@@ -86,7 +88,8 @@ def info_drink_diagram3():
                      'Весна': 0}
     result_drink3 = cur.execute("""SELECT drink_3 FROM Results_drink""").fetchall()
     for el in result_drink3:
-        values_drink3[el[0]] += 1
+        if el[0] in values_drink3.keys():
+            values_drink3[el[0]] += 1
     vals3 = [values_drink3['Осень'], values_drink3['Лето'], values_drink3['Зима'], values_drink3['Весна']]
     idx_remove3 = []
     for el in vals3:
@@ -110,7 +113,8 @@ def info_drink_diagram4():
                      'Фантастика': 0}
     result_drink4 = cur.execute("""SELECT drink_4 FROM Results_drink""").fetchall()
     for el in result_drink4:
-        values_drink4[el[0]] += 1
+        if el[0] in values_drink4.keys():
+            values_drink4[el[0]] += 1
     vals4 = [values_drink4['Детектив'], values_drink4['Роман'], values_drink4['Фэнтези'], values_drink4['Фантастика']]
     idx_remove4 = []
     for el in vals4:
@@ -134,7 +138,8 @@ def info_drink_diagram5():
                      'Прокрастинирую': 0}
     result_drink5 = cur.execute("""SELECT drink_5 FROM Results_drink""").fetchall()
     for el in result_drink5:
-        values_drink5[el[0]] += 1
+        if el[0] in values_drink5.keys():
+            values_drink5[el[0]] += 1
     vals5 = [values_drink5['Заранее'], values_drink5['Ничего'], values_drink5['Умею'], values_drink5['Прокрастинирую']]
     idx_remove5 = []
     for el in vals5:
