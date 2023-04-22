@@ -31,12 +31,9 @@ def search():
                 count += 1
         if count == len(i.split()):
             ready.append(title)
-
-    if not constants.if_auto:
+    if not constants.if_auto or constants.if_auto:
         return render_template("search_index.html", titles=constants.titles, request=ready, if_auto=constants.if_auto,
                                user=constants.user_name)
-    return render_template("search_index.html", if_auto=constants.if_auto,
-                           user=constants.user_name, titles=constants.titles, request=constants.searching)
 
 
 @app.route("/auto", methods=['GET', 'POST'])
@@ -67,7 +64,8 @@ def dog_1():
                 constants.dog_spisok.append(constants.result)
                 constants.last_temp = constants.result
         return redirect("/dog_test_2")
-    return render_template("dog_test_1.html", head='Какая вы собака?', if_auto=constants.if_auto, user=constants.user_name,
+    return render_template("dog_test_1.html", head='Какая вы собака?', if_auto=constants.if_auto,
+                           user=constants.user_name,
                            result=constants.result,
                            title='Какой у вас темперамент?', first='Холерик',
                            second='Флегматик', third='Сангвинник', fourth='Меланхолик', source='/dog_test_1',
@@ -95,14 +93,16 @@ def dog_2():
                 constants.dog_spisok.append(constants.result)
                 constants.last_tea = constants.result
         return redirect("/dog_test_3")
-    return render_template("dog_test_1.html", head='Какая вы собака?', if_auto=constants.if_auto, user=constants.user_name,
+    return render_template("dog_test_1.html", head='Какая вы собака?', if_auto=constants.if_auto,
+                           user=constants.user_name,
                            result=constants.result,
                            title='Ваш любимый чай?', first='Я не пью чай',
                            second='Черный чай Ассам', third='Зеленый чай Молочный Улун',
                            fourth='Черный фруктовый чай', source='/dog_test_2',
                            id_1='Not', id_2='Assam', id_3='Ulun', id_4='Fruit',
                            value_1='Нет',
-                           value_2='Ассам', value_3='Улун', value_4='Фруктовый', name='tea', spisok=constants.dog_spisok,
+                           value_2='Ассам', value_3='Улун', value_4='Фруктовый', name='tea',
+                           spisok=constants.dog_spisok,
                            message='Дальше', progress='20%', count=constants.dog_ins, picture='static/img/dog_2.jpg')
 
 
@@ -123,13 +123,15 @@ def dog_3():
                 constants.dog_spisok.append(constants.result)
                 constants.last_hobbie = constants.result
         return redirect("/dog_test_4")
-    return render_template("dog_test_1.html", head='Какая вы собака?', if_auto=constants.if_auto, user=constants.user_name,
+    return render_template("dog_test_1.html", head='Какая вы собака?', if_auto=constants.if_auto,
+                           user=constants.user_name,
                            result=constants.result,
                            title='Чем вы предпочли бы заняться?', first='Просмотром фильма или сериала',
                            second='Рисованием', third='Чтением книги', fourth='Спортом', source='/dog_test_3',
                            id_1='Film', id_2='Draw', id_3='Book', id_4='Sport',
                            value_1='Кино',
-                           value_2='Рисование', value_3='Книги', value_4='Спорт', name='hobbie', spisok=constants.dog_spisok,
+                           value_2='Рисование', value_3='Книги', value_4='Спорт', name='hobbie',
+                           spisok=constants.dog_spisok,
                            message='Дальше', progress='40%', count=constants.dog_ins, picture='static/img/dog_3.jpeg')
 
 
@@ -151,14 +153,16 @@ def dog_4():
                 constants.last_power = constants.result
 
         return redirect("/dog_test_5")
-    return render_template("dog_test_1.html", head='Какая вы собака?', if_auto=constants.if_auto, user=constants.user_name,
+    return render_template("dog_test_1.html", head='Какая вы собака?', if_auto=constants.if_auto,
+                           user=constants.user_name,
                            result=constants.result,
                            title='Что бы вы выбрали?', first='Богатство',
                            second='Любовь', third='Сверхъестественные силы', fourth='Бессмертие',
                            source='/dog_test_4',
                            id_1='Money', id_2='Love', id_3='Powers', id_4='Deathless',
                            value_1='Богатство',
-                           value_2='Любовь', value_3='Силы', value_4='Бессмертие', name='wish', spisok=constants.dog_spisok,
+                           value_2='Любовь', value_3='Силы', value_4='Бессмертие', name='wish',
+                           spisok=constants.dog_spisok,
                            message='Дальше', progress='60%', count=constants.dog_ins, picture='static/img/dog_4.webp')
 
 
@@ -180,14 +184,17 @@ def dog_5():
                 constants.last_color = constants.result
 
         return redirect("/dog_results")
-    return render_template("dog_test_1.html", head='Какая вы собака?', if_auto=constants.if_auto, user=constants.user_name,
+    return render_template("dog_test_1.html", head='Какая вы собака?', if_auto=constants.if_auto,
+                           user=constants.user_name,
                            result=constants.result,
                            title='Ваш любимый цвет?', first='Синий',
                            second='Желтый', third='Зеленый', fourth='Красный', source='/dog_test_5',
                            id_1='Blue', id_2='Yellow', id_3='Green', id_4='Red',
                            value_1='Синий',
-                           value_2='Желтый', value_3='Зеленый', value_4='Красный', name='color', spisok=constants.dog_spisok,
-                           message='Завершить', progress='80%', count=constants.dog_ins, picture='static/img/dog_5.jfif')
+                           value_2='Желтый', value_3='Зеленый', value_4='Красный', name='color',
+                           spisok=constants.dog_spisok,
+                           message='Завершить', progress='80%', count=constants.dog_ins,
+                           picture='static/img/dog_5.jfif')
 
 
 @app.route("/dog_results", )
@@ -244,7 +251,8 @@ def drink_1():
                 constants.drink_spisok.append(constants.result)
                 constants.last_char = constants.result
         return redirect("/drink_test_2")
-    return render_template("dog_test_1.html", head='Какой вы напиток?', if_auto=constants.if_auto, user=constants.user_name,
+    return render_template("dog_test_1.html", head='Какой вы напиток?', if_auto=constants.if_auto,
+                           user=constants.user_name,
                            result=constants.result,
                            title='Как бы вы охарактеризовали себя?', first='Я жизнерадостный человек',
                            second='Я задумчивый человек', third='Я мечтательный человек',
@@ -273,15 +281,18 @@ def drink_2():
                 constants.drink_spisok.append(constants.result)
                 constants.last_wea = constants.result
         return redirect("/drink_test_3")
-    return render_template("dog_test_1.html", head='Какой вы напиток?', if_auto=constants.if_auto, user=constants.user_name,
+    return render_template("dog_test_1.html", head='Какой вы напиток?', if_auto=constants.if_auto,
+                           user=constants.user_name,
                            result=constants.result,
                            title='Ваша любимая погода?', first='Дождливая',
                            second='Солнечная', third='Облачная',
                            fourth='Снежная', source='/drink_test_2',
                            id_1='Rainy', id_2='Sunny', id_3='Cloudy', id_4='Snow',
                            value_1='Дождь',
-                           value_2='Солнце', value_3='Облачно', value_4='Снег', name='weather', spisok=constants.drink_spisok,
-                           message='Дальше', progress='20%', count=constants.drink_ins, picture='static/img/drink_2.jpg')
+                           value_2='Солнце', value_3='Облачно', value_4='Снег', name='weather',
+                           spisok=constants.drink_spisok,
+                           message='Дальше', progress='20%', count=constants.drink_ins,
+                           picture='static/img/drink_2.jpg')
 
 
 @app.route("/drink_test_3", methods=['POST', 'GET'])
@@ -301,14 +312,16 @@ def drink_3():
                 constants.drink_spisok.append(constants.result)
                 constants.last_time = constants.result
         return redirect("/drink_test_4")
-    return render_template("dog_test_1.html", head='Какой вы напиток?', if_auto=constants.if_auto, user=constants.user_name,
+    return render_template("dog_test_1.html", head='Какой вы напиток?', if_auto=constants.if_auto,
+                           user=constants.user_name,
                            result=constants.result,
                            title='Ваше любимое время года?', first='Зима',
                            second='Лето', third='Осень', fourth='Весна', source='/drink_test_3',
                            id_1='Winter', id_2='Summer', id_3='Autumn', id_4='Spring',
                            value_1='Зима',
                            value_2='Лето', value_3='Осень', value_4='Весна', name='time', spisok=constants.drink_spisok,
-                           message='Дальше', progress='40%', count=constants.drink_ins, picture='static/img/drink_3.jpg')
+                           message='Дальше', progress='40%', count=constants.drink_ins,
+                           picture='static/img/drink_3.jpg')
 
 
 @app.route("/drink_test_4", methods=['POST', 'GET'])
@@ -329,7 +342,8 @@ def drink_4():
                 constants.last_genre = constants.result
 
         return redirect("/drink_test_5")
-    return render_template("dog_test_1.html", head='Какой вы напиток?', if_auto=constants.if_auto, user=constants.user_name,
+    return render_template("dog_test_1.html", head='Какой вы напиток?', if_auto=constants.if_auto,
+                           user=constants.user_name,
                            result=constants.result,
                            title='Какой жанр книг вы бы предпочли?', first='Детектив',
                            second='Фантастика', third='Роман', fourth='Фэнтези',
@@ -338,7 +352,8 @@ def drink_4():
                            value_1='Богатство',
                            value_2='Фантастика', value_3='Роман', value_4='Фэнтези', name='genre',
                            spisok=constants.drink_spisok,
-                           message='Дальше', progress='60%', count=constants.drink_ins, picture='static/img/drink_4.jpg')
+                           message='Дальше', progress='60%', count=constants.drink_ins,
+                           picture='static/img/drink_4.jpg')
 
 
 @app.route("/drink_test_5", methods=['POST', 'GET'])
@@ -359,7 +374,8 @@ def drink_5():
                 constants.last_man = constants.result
 
         return redirect("/drink_results")
-    return render_template("dog_test_1.html", head='Какой вы напиток?', if_auto=constants.if_auto, user=constants.user_name,
+    return render_template("dog_test_1.html", head='Какой вы напиток?', if_auto=constants.if_auto,
+                           user=constants.user_name,
                            result=constants.result,
                            title='Насколько вы организованны?', first='Я умею распределять свое время',
                            second='Я часто прокрастинирую и откладываю на потом', third='Я делаю все заранее',
@@ -368,7 +384,8 @@ def drink_5():
                            value_1='Умею',
                            value_2='Прокрастинирую', value_3='Заранее', value_4='Ничего', name='manage',
                            spisok=constants.drink_spisok,
-                           message='Завершить', progress='80%', count=constants.drink_ins, picture='static/img/drink_5.webp')
+                           message='Завершить', progress='80%', count=constants.drink_ins,
+                           picture='static/img/drink_5.webp')
 
 
 @app.route("/drink_results", )
@@ -405,7 +422,8 @@ def result_drink():
     db_sess.add(ress)
     db_sess.commit()
 
-    return render_template("result_dog.html", head='Какой вы напиток?', title=constants.result, spis=constants.drink_spisok)
+    return render_template("result_dog.html", head='Какой вы напиток?', title=constants.result,
+                           spis=constants.drink_spisok)
 
 
 @app.route("/cat_test_1", methods=['POST', 'GET'])
@@ -550,7 +568,8 @@ def cat_5():
                            value_1='Нет',
                            value_2='Да', value_3='Иногда', value_4='Неиспытывал', name='friends',
                            spisok=constants.cat_spisok,
-                           message='Завершить', progress='80%', count=constants.cat_ins, picture='static/img/cat_5.webp')
+                           message='Завершить', progress='80%', count=constants.cat_ins,
+                           picture='static/img/cat_5.webp')
 
 
 @app.route("/cat_results")
@@ -607,7 +626,8 @@ def chin_1():
                 constants.chin_spisok.append(constants.result)
                 constants.last_film = constants.result
         return redirect("/chin_test_2")
-    return render_template("dog_test_1.html", head='Какая вы шиншилла?', if_auto=constants.if_auto, user=constants.user_name,
+    return render_template("dog_test_1.html", head='Какая вы шиншилла?', if_auto=constants.if_auto,
+                           user=constants.user_name,
                            result=constants.result,
                            title='Какое кино вы бы посмотрели?', first='Комедия',
                            second='Боевик', third='Фантастика',
@@ -636,7 +656,8 @@ def chin_2():
                 constants.chin_spisok.append(constants.result)
                 constants.last_people = constants.result
         return redirect("/chin_test_3")
-    return render_template("dog_test_1.html", head='Какая вы шиншилла?', if_auto=constants.if_auto, user=constants.user_name,
+    return render_template("dog_test_1.html", head='Какая вы шиншилла?', if_auto=constants.if_auto,
+                           user=constants.user_name,
                            result=constants.result,
                            title='С кем обычно вы проводите свое свободное время?', first='С группой друзей',
                            second='С семьей', third='С лучшим другом',
@@ -664,7 +685,8 @@ def chin_3():
                 constants.chin_spisok.append(constants.result)
                 constants.last_fear = constants.result
         return redirect("/chin_test_4")
-    return render_template("dog_test_1.html", head='Какая ты шиншилла?', if_auto=constants.if_auto, user=constants.user_name,
+    return render_template("dog_test_1.html", head='Какая ты шиншилла?', if_auto=constants.if_auto,
+                           user=constants.user_name,
                            result=constants.result,
                            title='Ваш страх?', first='Одиночество',
                            second='Смерть', third='Высота', fourth='Разочарованность', source='/chin_test_3',
@@ -693,7 +715,8 @@ def chin_4():
                 constants.last_like = constants.result
 
         return redirect("/chin_test_5")
-    return render_template("dog_test_1.html", head='Какая ты шиншилла?', if_auto=constants.if_auto, user=constants.user_name,
+    return render_template("dog_test_1.html", head='Какая ты шиншилла?', if_auto=constants.if_auto,
+                           user=constants.user_name,
                            result=constants.result,
                            title='Что больше всего вас привлекает в людях?', first='Ум',
                            second='Харизма', third='Трудолюбие', fourth='Чувственность',
@@ -723,7 +746,8 @@ def chin_5():
                 constants.last_believe = constants.result
 
         return redirect("/chin_results")
-    return render_template("dog_test_1.html", head='Какая ты шиншилла?', if_auto=constants.if_auto, user=constants.user_name,
+    return render_template("dog_test_1.html", head='Какая ты шиншилла?', if_auto=constants.if_auto,
+                           user=constants.user_name,
                            result=constants.result,
                            title='Доверяете ли вы людям?', first='Скорее да, чем нет',
                            second='Скорее нет, чем да', third='Определенно',
@@ -732,7 +756,8 @@ def chin_5():
                            value_1='Данет',
                            value_2='Нетда', value_3='Да', value_4='Нет', name='believe',
                            spisok=constants.chin_spisok,
-                           message='Завершить', progress='80%', count=constants.chin_ins, picture='static/img/chin_5.jfif')
+                           message='Завершить', progress='80%', count=constants.chin_ins,
+                           picture='static/img/chin_5.jfif')
 
 
 @app.route("/chin_results", )
@@ -769,7 +794,8 @@ def result_chin():
     db_sess.add(ress)
     db_sess.commit()
 
-    return render_template("result_dog.html", head='Какая вы шиншилла?', title=constants.result, spis=constants.chin_spisok)
+    return render_template("result_dog.html", head='Какая вы шиншилла?', title=constants.result,
+                           spis=constants.chin_spisok)
 
 
 @app.route('/register', methods=['GET', 'POST'])
@@ -797,7 +823,8 @@ def register():
         constants.user_email = user.email
         constants.user_id = user.id
         return redirect("/")
-    return render_template('register.html', title='Регистрация', form=form, if_auto=constants.if_auto, user=constants.user_name)
+    return render_template('register.html', title='Регистрация', form=form, if_auto=constants.if_auto,
+                           user=constants.user_name)
 
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -816,7 +843,8 @@ def login():
                                message="Неправильный логин или пароль. Возможно, требуется регистрация",
                                form=form)
 
-    return render_template('login.html', title='Авторизация', form=form, if_auto=constants.if_auto, user=constants.user_name)
+    return render_template('login.html', title='Авторизация', form=form, if_auto=constants.if_auto,
+                           user=constants.user_name)
 
 
 @app.route('/logout')
@@ -829,7 +857,8 @@ def logout():
 @app.route('/personal')
 def person():
     form = RequestsForm()
-    return render_template("personal.html", user=constants.user_name, if_auto=constants.if_auto, email=constants.user_email, form=form)
+    return render_template("personal.html", user=constants.user_name, if_auto=constants.if_auto,
+                           email=constants.user_email, form=form)
 
 
 @app.route('/statistics', methods=['GET', 'POST'])

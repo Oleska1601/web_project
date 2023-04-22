@@ -82,18 +82,18 @@ def info_drink_diagram2():
 def info_drink_diagram3():
     values_drink3 = {'Осень': 0,
                      'Лето': 0,
-                     'Снег': 0,
+                     'Зима': 0,
                      'Весна': 0}
     result_drink3 = cur.execute("""SELECT drink_3 FROM Results_drink""").fetchall()
     for el in result_drink3:
         values_drink3[el[0]] += 1
-    vals3 = [values_drink3['Кино'], values_drink3['Рисование'], values_drink3['Снег'], values_drink3['Весна']]
+    vals3 = [values_drink3['Осень'], values_drink3['Лето'], values_drink3['Зима'], values_drink3['Весна']]
     idx_remove3 = []
     for el in vals3:
         if el == 0:
             idx_remove3.append(vals3.index(el))
             vals3.remove(el)
-    labels3 = ["Осень", "Лето", "Снег", "Весна"]
+    labels3 = ["Осень", "Лето", "Зима", "Весна"]
     if idx_remove3:
         for el in idx_remove3:
             labels3.remove(labels3[el])

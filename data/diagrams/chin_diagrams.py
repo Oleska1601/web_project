@@ -1,6 +1,7 @@
 import sqlite3
 from matplotlib import pyplot as plt
-
+import matplotlib
+matplotlib.use('agg')
 con = sqlite3.connect("db/tests.db", check_same_thread=False)
 cur = con.cursor()
 
