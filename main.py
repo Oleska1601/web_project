@@ -31,12 +31,9 @@ def search():
                 count += 1
         if count == len(i.split()):
             ready.append(title)
-
-    if not constants.if_auto:
+    if not constants.if_auto or constants.if_auto:
         return render_template("search_index.html", titles=constants.titles, request=ready, if_auto=constants.if_auto,
                                user=constants.user_name)
-    return render_template("search_index.html", if_auto=constants.if_auto,
-                           user=constants.user_name, titles=constants.titles, request=constants.searching)
 
 
 @app.route("/auto", methods=['GET', 'POST'])
